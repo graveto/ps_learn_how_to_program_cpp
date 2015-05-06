@@ -15,18 +15,19 @@ std::string askName(){
     return name;
 }
 
-std::string containsLetter(std::string name, char letter){
+std::string containsLetter(std::string name, std::string letter){
     std::string ans;
-    if(name.find(letter)){
-        ans = "It contains " + std::to_string(letter);
+    std::size_t found = name.find(letter);
+    if(found != std::string::npos){
+        ans = "It contains " + letter;
     }else{
-        ans = "It does not contain " + std::to_string(letter);
+        ans = "It does not contain " + letter;
     }
     return ans;
 }
 
-char askLetter(){
-    char letter;
+std::string askLetter(){
+    std::string letter;
     std::cout << "Give me a letter: " << std::endl;
     std::cin >> letter;
     return letter;

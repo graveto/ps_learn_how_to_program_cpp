@@ -8,7 +8,7 @@ int main()
     int guess;
     int answer = 8;
     int nameLength;
-    char letter;
+    std::string letter;
     bool correctAnswer = false;
 
     name = askName();
@@ -17,7 +17,8 @@ int main()
     nameLength = name.length();
 
     std::cout << "Hello " + name + " , your name is " + std::to_string(nameLength) +
-       " letters long. " + containsLetter(name, letter) + ". Let's play a game." << std::endl;
+       " letters long. " + containsLetter(name, letter) + ". Let's play a game."
+       << std::endl;
 
     guess = prompt();
 
